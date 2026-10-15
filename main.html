@@ -1,0 +1,45 @@
+<!--
+Time control: 1, 3, 5 or 10 minutes each
+Tapping your side stops your clock and starts the other
+Increment option: +2 seconds added after each move
+A clock that hits 0 shows who lost on time and locks
+-->
+
+<!Doctype html>
+<html>
+    <head>
+        <title>Chess Clock</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <div>
+            <h1>Chess Clock</h1>
+
+            <p id="message"></p>
+
+            <div id="time-controls">
+                <button onclick="onTimeControlTap(1)">1 Min</button>
+                <button onclick="onTimeControlTap(3)">3 Min</button>
+                <button onclick="onTimeControlTap(5)">5 Min</button>
+                <button onclick="onTimeControlTap(10)">10 Min</button>
+            </div>
+
+            <div class="clock">
+                <button id="player1" class="side">
+                    <span class="name">White</span>
+                    <span class="time" id="time1">10:00</span>
+                </button>
+
+                <button id="player2" class="side">
+                    <span class="name">Black</span>
+                    <span class="time" id="time2">10:00</span>
+                </button>
+            </div>
+
+            <button id="stop-button">Stop / Forfeit</button>
+
+            
+        </div>
+    </body>
+    <script src="script.js"></script>
+</html>
